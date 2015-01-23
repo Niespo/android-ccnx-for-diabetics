@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="DiabeticsHelperTheme" parent="@style/_DiabeticsHelperTheme"/>
+
+  <style name="_DiabeticsHelperTheme" parent="android:Theme.Holo.Light">
+
+    <item name="android:editTextBackground">@drawable/diabeticshelpertheme_edit_text_holo_light</item>
+
+    <item name="android:textColorHighlight">#995b87ba</item>
+    <item name="android:textSelectHandleLeft">@drawable/diabeticshelpertheme_text_select_handle_left</item>
+    <item name="android:textSelectHandleRight">@drawable/diabeticshelpertheme_text_select_handle_right</item>
+    <item name="android:textSelectHandle">@drawable/diabeticshelpertheme_text_select_handle_middle</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewDiabeticsHelperTheme</item>
+
+    <item name="android:listChoiceIndicatorMultiple">@drawable/diabeticshelpertheme_btn_check_holo_light</item>
+
+    <item name="android:listChoiceIndicatorSingle">@drawable/diabeticshelpertheme_btn_radio_holo_light</item>
+
+    <item name="android:buttonStyle">@style/ButtonDiabeticsHelperTheme</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonDiabeticsHelperTheme</item>
+
+    <item name="android:dropDownSpinnerStyle">@style/SpinnerDiabeticsHelperTheme</item>
+
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarDiabeticsHelperTheme</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarDiabeticsHelperTheme</item>
+
+    <item name="android:ratingBarStyle">@style/RatingBarDiabeticsHelperTheme</item>
+
+    <item name="android:ratingBarStyleIndicator">@style/RatingBarBigDiabeticsHelperTheme</item>
+
+    <item name="android:ratingBarStyleSmall">@style/RatingBarSmallDiabeticsHelperTheme</item>
+
+    <item name="android:buttonStyleToggle">@style/ToggleDiabeticsHelperTheme</item>
+
+    <item name="android:listChoiceBackgroundIndicator">@drawable/diabeticshelpertheme_list_selector_holo_light</item>
+
+    <item name="android:activatedBackgroundIndicator">@drawable/diabeticshelpertheme_activated_background_holo_light</item>
+
+    <item name="android:fastScrollThumbDrawable">@drawable/diabeticshelpertheme_fastscroll_thumb_holo</item>
+
+  </style>
+
+</resources>

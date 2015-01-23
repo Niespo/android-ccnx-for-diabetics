@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:weightSum="100" android:padding="20dp">
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Witamy w programie"
+            android:layout_gravity="center_horizontal" android:paddingBottom="5dp" android:textStyle="italic"
+            android:textColor="#ff595959"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Diabetics Helper"
+            android:layout_gravity="center_horizontal" android:paddingBottom="5dp" android:textStyle="bold|italic"
+            android:textColor="#5b87ba" android:textSize="40dp" android:textIsSelectable="false"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Prosimy o zalogowanie"
+            android:layout_gravity="center_horizontal" android:paddingBottom="30dp" android:textStyle="italic"
+            android:textSize="15dp" android:textColor="#ff595959"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="PESEL:"
+            android:textColor="#ff595959"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_pesel" android:layout_gravity="center_horizontal" android:textColor="#ff595959"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Hasło" android:textColor="#ff595959"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/user_password" android:layout_gravity="center_horizontal" android:textColor="#ff595959"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:gravity="center">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zaloguj"
+                android:onClick="login" android:layout_margin="5dp" android:textColor="#ffffffff"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dodaj użytkownika"
+                android:onClick="registerPatient" android:padding="10dp" android:layout_margin="5dp"
+                android:textColor="#ffffffff"/>
+    </LinearLayout>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView" android:layout_gravity="center_horizontal"
+            android:background="@drawable/main_logo" android:layout_margin="20dp"/>
+
+</LinearLayout>

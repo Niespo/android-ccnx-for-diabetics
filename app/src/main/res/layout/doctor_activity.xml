@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:padding="10dp">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Zalogowany jako lekarz:"
+            android:id="@+id/textView" android:textStyle="italic" android:textColor="#ff595959"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:padding="5dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/user_firstname" android:layout_marginRight="10dp" android:textStyle="bold"
+                android:textColor="#ff595959"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/user_surename" android:textStyle="bold" android:textColor="#ff595959"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:padding="5dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Pesel:"
+                android:id="@+id/textView2" android:layout_marginRight="10dp" android:textStyle="bold|italic"
+                android:textColor="#ff595959"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/user_pesel" android:textColor="#ff595959"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:padding="5dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Data urodzenia:"
+                android:id="@+id/textView3" android:layout_marginRight="10dp" android:textStyle="bold|italic"
+                android:textColor="#ff595959"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/user_birtdate" android:textColor="#ff595959"/>
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nr. PESEL pacjenta"
+            android:id="@+id/textView6" android:padding="5dp" android:textStyle="normal|italic"
+            android:textColor="#FF595959"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/patient_pesel_to_add" android:layout_gravity="center_horizontal"
+            android:padding="5dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dodaj pacjenta"
+            android:id="@+id/button" android:layout_gravity="center_horizontal" android:onClick="addPatient"
+            android:textColor="#ffffffff"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Lista pacjentów"
+            android:id="@+id/textView5" android:layout_gravity="center_horizontal" android:textStyle="bold|italic"
+            android:textColor="#ff595959"/>
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:id="@+id/patient_list"
+            android:layout_weight="0.75"
+            />
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wyloguj"
+            android:id="@+id/button2222" android:layout_gravity="center_horizontal" android:onClick="logoutUser"
+            android:textColor="#ffffffff"/>
+</LinearLayout>
