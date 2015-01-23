@@ -1,4 +1,4 @@
-package pl.androidland.studia.tirt.diabetichelper.android;
+package pl.androidland.studia.tirt.diabetichelper.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

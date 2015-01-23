@@ -8,12 +8,12 @@ import java.util.Date;
 public class GlucoseMeasurement extends RealmObject {
     private double measurement;
 
-    public Date getData() {
-        return data;
+    public Date getDate() {
+        return date;
     }
 
-    public void setData(Date data) {
-        this.data = data;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public double getMeasurement() {
@@ -24,6 +24,6 @@ public class GlucoseMeasurement extends RealmObject {
         this.measurement = measurement;
     }
 
-    private Date data;
+    private Date date;
 
 }

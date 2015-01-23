@@ -1,7 +1,7 @@
-package pl.androidland.studia.tirt.diabetichelper.utils.data;
+package pl.androidland.studia.tirt.diabetichelper.utils.dummydata;
 
-import pl.androidland.studia.tirt.diabetichelper.android.DateUtils;
-import pl.androidland.studia.tirt.diabetichelper.android.EncryptionUtils;
+import pl.androidland.studia.tirt.diabetichelper.utils.DateUtils;
+import pl.androidland.studia.tirt.diabetichelper.utils.EncryptionUtils;
 import pl.androidland.studia.tirt.diabetichelper.database.models.User;
 import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
 

@@ -5,7 +5,7 @@ import io.realm.Realm;
 import io.realm.RealmResults;
 import pl.androidland.studia.tirt.diabetichelper.database.models.User;
 import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
-import pl.androidland.studia.tirt.diabetichelper.utils.data.DummyDataMocker;
+import pl.androidland.studia.tirt.diabetichelper.utils.dummydata.DummyDataMocker;
 
 public class ApplicationBus extends Application {
 

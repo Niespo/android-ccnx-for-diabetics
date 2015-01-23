@@ -2,7 +2,7 @@ package pl.androidland.studia.tirt.diabetichelper.auth;
 
 import pl.androidland.studia.tirt.diabetichelper.ApplicationBus;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationState;
-import pl.androidland.studia.tirt.diabetichelper.android.EncryptionUtils;
+import pl.androidland.studia.tirt.diabetichelper.utils.EncryptionUtils;
 import pl.androidland.studia.tirt.diabetichelper.database.models.User;
 import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
 import android.content.Context;

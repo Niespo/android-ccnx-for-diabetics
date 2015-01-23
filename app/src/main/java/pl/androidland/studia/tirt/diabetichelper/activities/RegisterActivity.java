@@ -7,8 +7,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 import org.apache.commons.lang.StringUtils;
 import pl.androidland.studia.tirt.diabetichelper.R;
-import pl.androidland.studia.tirt.diabetichelper.android.DateUtils;
-import pl.androidland.studia.tirt.diabetichelper.android.EncryptionUtils;
+import pl.androidland.studia.tirt.diabetichelper.utils.DateUtils;
+import pl.androidland.studia.tirt.diabetichelper.utils.EncryptionUtils;
 import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
 
 import java.util.Date;

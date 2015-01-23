@@ -9,7 +9,7 @@ import android.widget.TextView;
 import io.realm.RealmBaseAdapter;
 import io.realm.RealmResults;
 import pl.androidland.studia.tirt.diabetichelper.R;
-import pl.androidland.studia.tirt.diabetichelper.android.DateUtils;
+import pl.androidland.studia.tirt.diabetichelper.utils.DateUtils;
 import pl.androidland.studia.tirt.diabetichelper.database.models.GlucoseMeasurement;
 
 
@@ -35,10 +35,10 @@ public class MeasurementsAdapter extends RealmBaseAdapter<GlucoseMeasurement> im
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        realmResults.sort("data", false);
+        realmResults.sort("date", false);
         GlucoseMeasurement measurement = realmResults.get(position);
         viewHolder.measurement.setText(String.format("%.2f", measurement.getMeasurement()));
-        viewHolder.date.setText(DateUtils.toSimpleFormat(measurement.getData()));
+        viewHolder.date.setText(DateUtils.toSimpleFormat(measurement.getDate()));
         return convertView;
     }
 

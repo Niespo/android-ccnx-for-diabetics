@@ -7,7 +7,7 @@ import android.widget.Toast;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationBus;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationState;
 import pl.androidland.studia.tirt.diabetichelper.R;
-import pl.androidland.studia.tirt.diabetichelper.android.DateUtils;
+import pl.androidland.studia.tirt.diabetichelper.utils.DateUtils;
 import pl.androidland.studia.tirt.diabetichelper.database.models.User;
 import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
 

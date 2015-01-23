@@ -31,7 +31,7 @@ public class DatabaseService {
 
     private static GlucoseMeasurement createMeasurment(double measurement) {
         GlucoseMeasurement glucoseMeasurement = REALM_IO.createObject(GlucoseMeasurement.class);
-        glucoseMeasurement.setData(new Date());
+        glucoseMeasurement.setDate(new Date());
         glucoseMeasurement.setMeasurement(measurement);
         return glucoseMeasurement;
     }
