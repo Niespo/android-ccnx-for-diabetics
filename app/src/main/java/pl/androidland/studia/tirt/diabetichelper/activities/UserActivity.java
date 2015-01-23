@@ -40,7 +40,7 @@ public class UserActivity extends Activity {
     }
 
     protected boolean setUser(User user) {
-        if (user !=null) {
+        if (user != null) {
             setUserRequestedForMeasurment(user);
             setUserData(user);
             return true;
@@ -77,19 +77,4 @@ public class UserActivity extends Activity {
         return userRequestedForMeasurment = user;
     }
 
-    protected TextView getFirstname() {
-        return tvFirstname;
-    }
-
-    protected TextView getSurname() {
-        return tvSurname;
-    }
-
-    protected TextView getPesel() {
-        return tvPesel;
-    }
-
-    protected TextView getBirthDate() {
-        return tvBirthDate;
-    }
 }

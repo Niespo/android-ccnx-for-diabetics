@@ -28,10 +28,6 @@ public class AuthService {
         return true;
     }
 
-    public void logout() {
-        user = null;
-        state.setLoggedOut();
-    }
 
     private boolean validatePeselId(String peselId) {
         if (!DatabaseService.isPatientRegistered(peselId)) {
