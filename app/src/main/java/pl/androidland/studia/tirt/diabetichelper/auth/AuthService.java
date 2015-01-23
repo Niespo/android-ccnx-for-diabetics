@@ -2,6 +2,7 @@ package pl.androidland.studia.tirt.diabetichelper.auth;
 
 import pl.androidland.studia.tirt.diabetichelper.ApplicationBus;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationState;
+import pl.androidland.studia.tirt.diabetichelper.R;
 import pl.androidland.studia.tirt.diabetichelper.utils.EncryptionUtils;
 import pl.androidland.studia.tirt.diabetichelper.database.models.User;
 import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
@@ -34,7 +35,7 @@ public class AuthService {
 
     private boolean validatePeselId(String peselId) {
         if (!DatabaseService.isPatientRegistered(peselId)) {
-            Toast.makeText(context, "Ten nr. PESEL nie został zarejestrowany", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getString(R.string.TOAST_MESSAGE_PESEL_ALREADY_REGISTERED), Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
@@ -47,7 +48,7 @@ public class AuthService {
         String encryptedPassword = EncryptionUtils.generateMd5Hash(password);
         String storedPassword = user.getPassword();
         if (!storedPassword.equals(encryptedPassword)) {
-            Toast.makeText(context, "Hasło nie jest prawidłowe!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getString(R.string.TOAST_MESSAGE_INCORRECT_PASSWORD), Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;

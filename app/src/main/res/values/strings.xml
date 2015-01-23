@@ -22,5 +22,7 @@
     <string name="TOAST_MESSAGE_INCORRECT_PESEL_FORMAT">Niepoprawny nr. PESEL!</string>
     <string name="TOAST_MESSAGE_TYPED_PASSWORD_NOT_EQUAL">Podane hasła powinny być identyczne!</string>
     <string name="TOAST_MESSAGE_INCORRECT_BIRTH_DATE_FORMAT">Niepoprawny format daty urodzenia!</string>
+    <string name="TOAST_MESSAGE_PESEL_ALREADY_REGISTERED">Ten nr. PESEL nie został zarejestrowany</string>
+    <string name="TOAST_MESSAGE_INCORRECT_PASSWORD">Hasło nie jest prawidłowe!</string>
 
 </resources>
