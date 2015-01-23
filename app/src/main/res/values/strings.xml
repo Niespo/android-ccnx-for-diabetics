@@ -10,5 +10,17 @@
     <string name="TOAST_MESSAGE_PATIENT_DOES_NOT_EXIST">Taki pacjent nie istnieje</string>
     <string name="TOAST_MESSAGE_ADD_MEASUREMENT">Dodano pomiar!</string>
     <string name="TOAST_MESSAGE_UNSUPPORTED_MEASUREMENT_FORMAT">Nieprawidłowy format pomiaru</string>
+    <string name="TOAST_MESSAGE_REGISTRATION_SUCCESS">Użytkownik został zarejestrowany!</string>
+    <string name="TOAST_MESSAGE_USER_ALREADY_HAS_REGISTERED">Użytkownik o podanym nr. PESEL został już zarejestrowany!
+    </string>
+    <string name="TOAST_MESSAGE_HAVE_TO_TYPE_PASSWORD_AGAIN">Musisz powtórzyć hasło.</string>
+    <string name="TOAST_MESSAGE_HAVE_TO_TYPE_PASSWORD">Musisz wprowadzić hasło.</string>
+    <string name="TOAST_MESSAGE_HAVE_TO_TYPE_BIRTH_DATE">Musisz wprowadzić date urodzenia.</string>
+    <string name="TOAST_MESSAGE_HAVE_TO_TYPE_PESEL_ID">Musisz wprowadzić nr PESEL</string>
+    <string name="TOAST_MESSAGE_HAVE_TO_TYPE_SURNAME">Musisz wprowadzić nazwisko.</string>
+    <string name="TOAST_MESSAGE_HAVE_TO_TYPE_FIRSTNAME">Musisz wprowadzić imię.</string>
+    <string name="TOAST_MESSAGE_INCORRECT_PESEL_FORMAT">Niepoprawny nr. PESEL!</string>
+    <string name="TOAST_MESSAGE_TYPED_PASSWORD_NOT_EQUAL">Podane hasła powinny być identyczne!</string>
+    <string name="TOAST_MESSAGE_INCORRECT_BIRTH_DATE_FORMAT">Niepoprawny format daty urodzenia!</string>
 
 </resources>
