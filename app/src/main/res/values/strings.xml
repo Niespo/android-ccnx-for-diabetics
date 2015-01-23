@@ -24,5 +24,24 @@
     <string name="TOAST_MESSAGE_INCORRECT_BIRTH_DATE_FORMAT">Niepoprawny format daty urodzenia!</string>
     <string name="TOAST_MESSAGE_PESEL_ALREADY_REGISTERED">Ten nr. PESEL nie został zarejestrowany</string>
     <string name="TOAST_MESSAGE_INCORRECT_PASSWORD">Hasło nie jest prawidłowe!</string>
+    <string name="MAIN_ACTIVITY_WELCOME_MESSAGE">Witamy w programie</string>
+    <string name="MAIN_ACTIVITY_APP_NAME">Diabetics Helper</string>
+    <string name="MAIN_ACTIVITY_LOGIN_MESSAGE">Prosimy o zalogowanie</string>
+    <string name="MAIN_ACTIVITY_PESEL_TEXT">PESEL:</string>
+    <string name="MAIN_ACTIVITY_PASSWORD_TEXT">Hasło</string>
+    <string name="MAIN_ACTIVITY_LETS_LOGIN_MESSAGE">Zaloguj</string>
+    <string name="MAIN_ACTIVITY_ADD_USER_MESSAGE">Dodaj użytkownika</string>
+    <string name="DOCTOR_ACTIVITY_LOGGED_AS_DOCTOR_MESSAGE">Zalogowany jako lekarz:</string>
+    <string name="USER_ACTIVITY_PESEL_TEXT">Pesel:</string>
+    <string name="USER_ACTIVITY_BIRTH_DATE_TEXT">Data urodzenia:</string>
+    <string name="DOCTOR_ACTIVITY_PATIENT_PESEL_TEXT">Nr. PESEL pacjenta</string>
+    <string name="DOCTOR_ACTIVITY_ADD_PATIENT_TEXT">Dodaj pacjenta</string>
+    <string name="DOCTOR_ACTIVITY_PATIENT_LIST">Lista pacjentów</string>
+    <string name="USER_ACTIVITY_LOGOUT_TEXT">Wyloguj</string>
+    <string name="MEASUREMENT_ACTIVITY_MEASUREMENTS_TEXT">Wyniki pomiarów glukozy:</string>
+    <string name="MEASUREMENT_ACTIVITY_GLUCOSE_MEASUREMENTS_TEXT">Pomiary glukozy</string>
+    <string name="MEASUREMENT_ACTIVITY_CLOSE_TEXT">Zamknij</string>
+    <string name="TOAST_MESSAGE_LOGGED_AS_DOCTOR">Zalogowany jako lekarz!</string>
+    <string name="TOAST_MESSAGE_LOGGED_AS_PATIENT">Zalogowany jako pacjent!</string>
 
 </resources>

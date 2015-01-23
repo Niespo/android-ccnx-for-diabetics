@@ -59,27 +59,23 @@ public class MainActivity extends Activity {
     }
 
     private void startDoctorActivity() {
-        Toast.makeText(this, "Zalogowany jako lekarz!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.TOAST_MESSAGE_LOGGED_AS_DOCTOR), Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, DoctorActivity.class));
     }
 
     private void startPatientActivity() {
-        Toast.makeText(this, "Zalogowany jako pacjent!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.TOAST_MESSAGE_LOGGED_AS_PATIENT), Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, PatientActivity.class));
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;

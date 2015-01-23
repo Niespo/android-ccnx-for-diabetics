@@ -20,7 +20,7 @@ import io.realm.RealmResults;
 public class PatientListAdapter extends RealmBaseAdapter<User> implements ListAdapter {
 
     private static final ApplicationState state = ApplicationBus.getState();
-    private Context context;
+    private final Context context;
 
     private static class ViewHolder {
         private TextView tvFirstname;

@@ -9,8 +9,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Zalogowany jako lekarz:"
-            android:id="@+id/textView" android:textStyle="italic" android:textColor="#ff595959"/>
+            android:text="@string/DOCTOR_ACTIVITY_LOGGED_AS_DOCTOR_MESSAGE"
+            android:textStyle="italic" android:textColor="#ff595959"/>
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -19,14 +19,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text=""
                 android:id="@+id/firstname" android:layout_marginRight="10dp" android:textStyle="bold"
                 android:textColor="#ff595959"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text=""
                 android:id="@+id/surname" android:textStyle="bold" android:textColor="#ff595959"/>
     </LinearLayout>
 
@@ -38,14 +38,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Pesel:"
-                android:id="@+id/textView2" android:layout_marginRight="10dp" android:textStyle="bold|italic"
+                android:text="@string/USER_ACTIVITY_PESEL_TEXT"
+                android:layout_marginRight="10dp" android:textStyle="bold|italic"
                 android:textColor="#ff595959"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text=""
                 android:id="@+id/peselId" android:textColor="#ff595959"/>
     </LinearLayout>
     <LinearLayout
@@ -56,22 +56,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Data urodzenia:"
-                android:id="@+id/textView3" android:layout_marginRight="10dp" android:textStyle="bold|italic"
+                android:text="@string/USER_ACTIVITY_BIRTH_DATE_TEXT"
+                android:layout_marginRight="10dp" android:textStyle="bold|italic"
                 android:textColor="#ff595959"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text=""
                 android:id="@+id/birthDate" android:textColor="#ff595959"/>
     </LinearLayout>
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nr. PESEL pacjenta"
-            android:id="@+id/textView6" android:padding="5dp" android:textStyle="normal|italic"
+            android:text="@string/DOCTOR_ACTIVITY_PATIENT_PESEL_TEXT"
+            android:padding="5dp" android:textStyle="normal|italic"
             android:textColor="#FF595959"/>
     <EditText
             android:layout_width="match_parent"
@@ -83,14 +83,14 @@
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dodaj pacjenta"
-            android:id="@+id/button" android:layout_gravity="center_horizontal" android:onClick="assignPatient"
+            android:text="@string/DOCTOR_ACTIVITY_ADD_PATIENT_TEXT"
+            android:layout_gravity="center_horizontal" android:onClick="assignPatient"
             android:textColor="#ffffffff"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Lista pacjentów"
+            android:text="@string/DOCTOR_ACTIVITY_PATIENT_LIST"
             android:id="@+id/textView5" android:layout_gravity="center_horizontal" android:textStyle="bold|italic"
             android:textColor="#ff595959"/>
     <ListView
@@ -99,7 +99,10 @@
             android:id="@+id/patient_list"
             android:layout_weight="0.75"
             />
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wyloguj"
-            android:id="@+id/button2222" android:layout_gravity="center_horizontal" android:onClick="logoutUser"
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/USER_ACTIVITY_LOGOUT_TEXT"
+            android:layout_gravity="center_horizontal"
+            android:onClick="logoutUser"
             android:textColor="#ffffffff"/>
 </LinearLayout>

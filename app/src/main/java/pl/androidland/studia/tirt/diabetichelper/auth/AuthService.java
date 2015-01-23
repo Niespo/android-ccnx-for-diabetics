@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 public class AuthService {
 
-    private static ApplicationState state = ApplicationBus.getState();
-    private Context context;
+    private final static ApplicationState state = ApplicationBus.getState();
+    private final Context context;
     private User user;
 
     public AuthService(Context context) {

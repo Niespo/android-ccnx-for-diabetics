@@ -9,8 +9,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Wyniki pomiarów glukozy:"
-            android:id="@+id/textView" android:textStyle="italic" android:textColor="#ff595959"/>
+            android:text="@string/MEASUREMENT_ACTIVITY_MEASUREMENTS_TEXT"
+             android:textStyle="italic" android:textColor="#ff595959"/>
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -19,14 +19,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text=""
                 android:id="@+id/firstname" android:layout_marginRight="10dp" android:textStyle="bold"
                 android:textColor="#ff595959"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text=""
                 android:id="@+id/surname" android:textStyle="bold" android:textColor="#ff595959"/>
     </LinearLayout>
 
@@ -38,14 +38,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Pesel:"
-                android:id="@+id/textView2" android:layout_marginRight="10dp" android:textStyle="bold|italic"
+                android:text="@string/USER_ACTIVITY_PESEL_TEXT"
+                 android:layout_marginRight="10dp" android:textStyle="bold|italic"
                 android:textColor="#ff595959"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text=""
                 android:id="@+id/peselId" android:textColor="#ff595959"/>
     </LinearLayout>
     <LinearLayout
@@ -56,14 +56,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Data urodzenia:"
-                android:id="@+id/textView3" android:layout_marginRight="10dp" android:textStyle="bold|italic"
+                android:text="@string/USER_ACTIVITY_BIRTH_DATE_TEXT"
+                 android:layout_marginRight="10dp" android:textStyle="bold|italic"
                 android:textColor="#ff595959"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text=""
                 android:id="@+id/birthDate" android:textColor="#ff595959"/>
     </LinearLayout>
 
@@ -71,8 +71,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Pomiary glukozy"
-            android:id="@+id/textView5" android:layout_gravity="center_horizontal" android:textStyle="bold|italic"
+            android:text="@string/MEASUREMENT_ACTIVITY_GLUCOSE_MEASUREMENTS_TEXT"
+            android:layout_gravity="center_horizontal" android:textStyle="bold|italic"
             android:textColor="#ff595959"/>
     <ListView
             android:layout_width="wrap_content"
@@ -81,7 +81,7 @@
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Zamknij"
-            android:id="@+id/button" android:textColor="#ffffffff" android:layout_gravity="center_horizontal"
+            android:text="@string/MEASUREMENT_ACTIVITY_CLOSE_TEXT"
+             android:textColor="#ffffffff" android:layout_gravity="center_horizontal"
             android:onClick="closeMeasurements"/>
 </LinearLayout>

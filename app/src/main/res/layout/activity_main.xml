@@ -9,28 +9,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Witamy w programie"
+            android:text="@string/MAIN_ACTIVITY_WELCOME_MESSAGE"
             android:layout_gravity="center_horizontal" android:paddingBottom="5dp" android:textStyle="italic"
             android:textColor="#ff595959"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Diabetics Helper"
+            android:text="@string/MAIN_ACTIVITY_APP_NAME"
             android:layout_gravity="center_horizontal" android:paddingBottom="5dp" android:textStyle="bold|italic"
             android:textColor="#5b87ba" android:textSize="40dp" android:textIsSelectable="false"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Prosimy o zalogowanie"
+            android:text="@string/MAIN_ACTIVITY_LOGIN_MESSAGE"
             android:layout_gravity="center_horizontal" android:paddingBottom="30dp" android:textStyle="italic"
             android:textSize="15dp" android:textColor="#ff595959"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="PESEL:"
+            android:text="@string/MAIN_ACTIVITY_PESEL_TEXT"
             android:textColor="#ff595959"/>
     <EditText
             android:layout_width="match_parent"
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Hasło" android:textColor="#ff595959"/>
+            android:text="@string/MAIN_ACTIVITY_PASSWORD_TEXT" android:textColor="#ff595959"/>
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,12 +54,12 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Zaloguj"
+                android:text="@string/MAIN_ACTIVITY_LETS_LOGIN_MESSAGE"
                 android:onClick="login" android:layout_margin="5dp" android:textColor="#ffffffff"/>
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dodaj użytkownika"
+                android:text="@string/MAIN_ACTIVITY_ADD_USER_MESSAGE"
                 android:onClick="registerPatient" android:padding="10dp" android:layout_margin="5dp"
                 android:textColor="#ffffffff"/>
     </LinearLayout>
