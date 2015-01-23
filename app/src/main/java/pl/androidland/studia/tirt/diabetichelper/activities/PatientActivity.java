@@ -1,6 +1,5 @@
 package pl.androidland.studia.tirt.diabetichelper.activities;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -17,7 +16,7 @@ import pl.androidland.studia.tirt.diabetichelper.database.models.User;
 import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
 
 
-public class PatientActivity extends Activity {
+public class PatientActivity extends UserActivity {
 
     private static final ApplicationState state = ApplicationBus.getState();
 
@@ -69,10 +68,7 @@ public class PatientActivity extends Activity {
         }
     }
 
-    public void logoutUser(View view) {
-        state.setLoggedOut();
-        finish();
-    }
+
 
     private boolean validateMeasurement() {
         measurement = 0.0d;
@@ -85,10 +81,5 @@ public class PatientActivity extends Activity {
         }
     }
 
-    private void finishOnLogout() {
 
-        Toast.makeText(this, "Wylogowano!", Toast.LENGTH_SHORT).show();
-        finish();
-
-    }
 }

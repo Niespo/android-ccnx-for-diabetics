@@ -1,24 +1,21 @@
 package pl.androidland.studia.tirt.diabetichelper.activities;
 
-import pl.androidland.studia.tirt.diabetichelper.ApplicationBus;
-import pl.androidland.studia.tirt.diabetichelper.ApplicationState;
-import pl.androidland.studia.tirt.diabetichelper.R;
-import pl.androidland.studia.tirt.diabetichelper.adapters.PatientListAdapter;
-import pl.androidland.studia.tirt.diabetichelper.android.DateUtils;
-import pl.androidland.studia.tirt.diabetichelper.database.models.User;
-import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import pl.androidland.studia.tirt.diabetichelper.R;
+import pl.androidland.studia.tirt.diabetichelper.adapters.PatientListAdapter;
+import pl.androidland.studia.tirt.diabetichelper.android.DateUtils;
+import pl.androidland.studia.tirt.diabetichelper.database.models.User;
+import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
 
 
-public class DoctorActivity extends Activity {
+public class DoctorActivity extends UserActivity {
 
-    private static final ApplicationState state = ApplicationBus.getState();
+
 
     private TextView tvFirstname;
     private TextView tvSurname;
@@ -75,13 +72,4 @@ public class DoctorActivity extends Activity {
         lvPatientList.setAdapter(adapter);
     }
 
-    public void logoutUser(View view) {
-        state.setLoggedOut();
-        finish();
-    }
-
-    private void finishOnLogout() {
-        Toast.makeText(this, "Wylogowano!", Toast.LENGTH_SHORT).show();
-        finish();
-    }
 }
