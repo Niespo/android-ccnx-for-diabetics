@@ -1,29 +1,16 @@
 package pl.androidland.studia.tirt.diabetichelper.activities;
 
-import org.apache.commons.lang.StringUtils;
-
-import pl.androidland.studia.tirt.diabetichelper.ApplicationBus;
-import pl.androidland.studia.tirt.diabetichelper.ApplicationState;
-import pl.androidland.studia.tirt.diabetichelper.R;
-import pl.androidland.studia.tirt.diabetichelper.adapters.MeasurementsAdapter;
-import pl.androidland.studia.tirt.diabetichelper.android.DateUtils;
-import pl.androidland.studia.tirt.diabetichelper.database.models.User;
-import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+import org.apache.commons.lang.StringUtils;
+import pl.androidland.studia.tirt.diabetichelper.R;
+import pl.androidland.studia.tirt.diabetichelper.adapters.MeasurementsAdapter;
+import pl.androidland.studia.tirt.diabetichelper.database.models.User;
+import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
 
-public class MeasurementActivity extends Activity {
+public class MeasurementActivity extends UserActivity {
 
-    private static final ApplicationState state = ApplicationBus.getState();
-
-    private TextView tvFirstname;
-    private TextView tvSurename;
-    private TextView tvPesel;
-    private TextView tvBirthDate;
     private ListView lvPatientMeasurements;
     private String peselId = StringUtils.EMPTY;
 
@@ -41,11 +28,8 @@ public class MeasurementActivity extends Activity {
         peselId = bundle.getString("peselId");
     }
 
-    private void initComponents() {
-        tvFirstname = (TextView) findViewById(R.id.patient_firstname);
-        tvSurename = (TextView) findViewById(R.id.patient_surename);
-        tvPesel = (TextView) findViewById(R.id.patient_pesel);
-        tvBirthDate = (TextView) findViewById(R.id.patient_age);
+    protected void initComponents() {
+        super.initComponents();
         lvPatientMeasurements = (ListView) findViewById(R.id.patient_measurements);
     }
 
@@ -54,13 +38,9 @@ public class MeasurementActivity extends Activity {
             finishOnLogout();
 
         User user = DatabaseService.getPatientByPesel(peselId);
-        if(user == null)
+        if(!setUser(user))
             return;
 
-        tvFirstname.setText(user.getFirstname());
-        tvSurename.setText(user.getSurname());
-        tvPesel.setText(user.getPeselId());
-        tvBirthDate.setText(DateUtils.toBirthDate(user.getBirthDate()));
         MeasurementsAdapter adapter = new MeasurementsAdapter(this, user.getMeasurements().where().findAll(), true);
         lvPatientMeasurements.setAdapter(adapter);
     }
@@ -69,10 +49,5 @@ public class MeasurementActivity extends Activity {
         finish();
     }
 
-    private void finishOnLogout() {
 
-        Toast.makeText(this, "Wylogowano!", Toast.LENGTH_SHORT).show();
-        finish();
-
-    }
 }

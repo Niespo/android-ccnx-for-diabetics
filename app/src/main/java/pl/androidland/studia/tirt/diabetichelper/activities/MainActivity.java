@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
     }
 
     private void initComponents() {
-        etPesel = (EditText) findViewById(R.id.user_pesel);
+        etPesel = (EditText) findViewById(R.id.peselId);
         etPassword = (EditText) findViewById(R.id.user_password);
     }
 

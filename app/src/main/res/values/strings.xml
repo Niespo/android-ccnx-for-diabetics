@@ -7,5 +7,8 @@
     <string name="PATIENT_LIST_TITLE">Lista pacjentów</string>
     <string name="MEASUREMENT_TITLE">Wyniki pomiarów</string>
     <string name="TOAST_MESSAGE_LOGOUT">Wylogowano!</string>
+    <string name="TOAST_MESSAGE_PATIENT_DOES_NOT_EXIST">Taki pacjent nie istnieje</string>
+    <string name="TOAST_MESSAGE_ADD_MEASUREMENT">Dodano pomiar!</string>
+    <string name="TOAST_MESSAGE_UNSUPPORTED_MEASUREMENT_FORMAT">Nieprawidłowy format pomiaru</string>
 
 </resources>

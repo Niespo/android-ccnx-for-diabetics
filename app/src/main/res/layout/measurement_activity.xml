@@ -20,14 +20,14 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/patient_firstname" android:layout_marginRight="10dp" android:textStyle="bold"
+                android:id="@+id/firstname" android:layout_marginRight="10dp" android:textStyle="bold"
                 android:textColor="#ff595959"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/patient_surename" android:textStyle="bold" android:textColor="#ff595959"/>
+                android:id="@+id/surname" android:textStyle="bold" android:textColor="#ff595959"/>
     </LinearLayout>
 
     <LinearLayout
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/patient_pesel" android:textColor="#ff595959"/>
+                android:id="@+id/peselId" android:textColor="#ff595959"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="horizontal"
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/patient_age" android:textColor="#ff595959"/>
+                android:id="@+id/birthDate" android:textColor="#ff595959"/>
     </LinearLayout>
 
     <TextView
