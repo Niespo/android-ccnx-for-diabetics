@@ -1,4 +1,4 @@
-package pl.androidland.studia.tirt.diabetichelper.ui.activities;
+package pl.androidland.studia.tirt.diabetichelper.ui.android.components.activities;
 
 import android.app.Activity;
 import android.os.Bundle;

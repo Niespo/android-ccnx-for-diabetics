@@ -1,15 +1,16 @@
-package pl.androidland.studia.tirt.diabetichelper.ui.activities;
+package pl.androidland.studia.tirt.diabetichelper.ui.android.components.activities;
 
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationBus;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationState;
 import pl.androidland.studia.tirt.diabetichelper.R;
-import pl.androidland.studia.tirt.diabetichelper.utils.DateUtils;
 import pl.androidland.studia.tirt.diabetichelper.database.models.User;
-import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
+import pl.androidland.studia.tirt.diabetichelper.ui.validators.UserValidator;
+import pl.androidland.studia.tirt.diabetichelper.utils.DateUtils;
 
 
 public class UserActivity extends Activity {
@@ -20,6 +21,14 @@ public class UserActivity extends Activity {
     private TextView tvPesel;
     private TextView tvBirthDate;
     private User userRequestedForMeasurment;
+
+    private UserValidator validator;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        validator = new UserValidator(this);
+    }
 
     public void logoutUser(View view) {
         state.setLoggedOut();
@@ -60,13 +69,8 @@ public class UserActivity extends Activity {
         finish();
     }
 
-    protected boolean validatePatient(String pesel) {
-        if (!DatabaseService.isPatientRegistered(pesel)) {
-            Toast.makeText(this, getString(R.string.TOAST_MESSAGE_PATIENT_DOES_NOT_EXIST), Toast.LENGTH_SHORT)
-                    .show();
-            return false;
-        }
-        return true;
+    protected UserValidator getValidator() {
+        return validator;
     }
 
     protected User getUserRequestedForMeasurment() {

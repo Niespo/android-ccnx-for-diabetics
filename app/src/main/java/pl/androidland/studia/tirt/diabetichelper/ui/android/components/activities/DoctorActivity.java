@@ -1,11 +1,11 @@
-package pl.androidland.studia.tirt.diabetichelper.ui.activities;
+package pl.androidland.studia.tirt.diabetichelper.ui.android.components.activities;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import pl.androidland.studia.tirt.diabetichelper.R;
-import pl.androidland.studia.tirt.diabetichelper.ui.adapters.PatientListAdapter;
+import pl.androidland.studia.tirt.diabetichelper.ui.android.components.adapters.PatientListAdapter;
 import pl.androidland.studia.tirt.diabetichelper.database.models.User;
 import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
 
@@ -24,7 +24,7 @@ public class DoctorActivity extends UserActivity {
 
     public void assignPatient(View view) {
         String pesel = etPatientPesel.getText().toString();
-        if (!validatePatient(pesel))
+        if (!getValidator().validatePatient(pesel))
             return;
 
         User patient = DatabaseService.getPatientByPesel(pesel);

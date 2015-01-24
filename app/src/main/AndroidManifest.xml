@@ -9,7 +9,7 @@
             android:theme="@style/_DiabeticsHelperTheme"
             android:name=".ApplicationBus">
         <activity
-                android:name=".ui.activities.MainActivity"
+                android:name=".ui.android.components.activities.MainActivity"
                 android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -18,19 +18,19 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".ui.activities.RegisterActivity"
+                android:name=".ui.android.components.activities.RegisterActivity"
                 android:label="@string/app_name">
         </activity>
         <activity
-                android:name=".ui.activities.PatientActivity"
+                android:name=".ui.android.components.activities.PatientActivity"
                 android:label="@string/app_name">
         </activity>
         <activity
-                android:name=".ui.activities.DoctorActivity"
+                android:name=".ui.android.components.activities.DoctorActivity"
                 android:label="@string/app_name">
         </activity>
         <activity
-                android:name=".ui.activities.MeasurementActivity"
+                android:name=".ui.android.components.activities.MeasurementActivity"
                 android:label="@string/app_name">
         </activity>
     </application>

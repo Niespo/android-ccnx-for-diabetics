@@ -1,4 +1,4 @@
-package pl.androidland.studia.tirt.diabetichelper.ui.activities;
+package pl.androidland.studia.tirt.diabetichelper.ui.android.components.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +9,7 @@ import org.apache.commons.lang.StringUtils;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationBus;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationState;
 import pl.androidland.studia.tirt.diabetichelper.R;
-import pl.androidland.studia.tirt.diabetichelper.ui.adapters.MeasurementsAdapter;
+import pl.androidland.studia.tirt.diabetichelper.ui.android.components.adapters.MeasurementsAdapter;
 import pl.androidland.studia.tirt.diabetichelper.database.models.User;
 import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
 
@@ -19,7 +19,6 @@ public class PatientActivity extends UserActivity {
 
     private ListView lvPatientMeasurements;
     private EditText etCurrentMeasurement;
-    private double measurement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +36,8 @@ public class PatientActivity extends UserActivity {
 
     protected void configureComponents() {
         super.configureComponents();
-        MeasurementsAdapter adapter = new MeasurementsAdapter(this, getUserRequestedForMeasurment().getMeasurements()
+        MeasurementsAdapter adapter = new MeasurementsAdapter(this, getUserRequestedForMeasurment()
+                .getMeasurements()
                 .where().findAll(),
                 true);
         lvPatientMeasurements.setAdapter(adapter);
@@ -45,23 +45,12 @@ public class PatientActivity extends UserActivity {
 
     public void addMeasurement(View view) {
         User user = state.getLoggedInUser();
-        if (validateMeasurement()) {
-            DatabaseService.addMeasurement(user, measurement);
+        String measurement = etCurrentMeasurement.getText().toString();
+        if (getValidator().validateMeasurement(measurement)) {
+            DatabaseService.addMeasurement(user, Double.parseDouble(measurement));
             etCurrentMeasurement.setText(StringUtils.EMPTY);
             Toast.makeText(this, getString(R.string.TOAST_MESSAGE_ADD_MEASUREMENT), Toast.LENGTH_SHORT)
                     .show();
-        }
-    }
-
-    private boolean validateMeasurement() {
-        measurement = 0.0d;
-        try {
-            measurement = Double.parseDouble(etCurrentMeasurement.getText().toString());
-            return true;
-        } catch (Exception e) {
-            Toast.makeText(this, getString(R.string.TOAST_MESSAGE_UNSUPPORTED_MEASUREMENT_FORMAT),
-                    Toast.LENGTH_SHORT).show();
-            return false;
         }
     }
 

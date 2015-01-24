@@ -1,9 +1,9 @@
-package pl.androidland.studia.tirt.diabetichelper.ui.adapters;
+package pl.androidland.studia.tirt.diabetichelper.ui.android.components.adapters;
 
 import pl.androidland.studia.tirt.diabetichelper.ApplicationBus;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationState;
 import pl.androidland.studia.tirt.diabetichelper.R;
-import pl.androidland.studia.tirt.diabetichelper.ui.activities.MeasurementActivity;
+import pl.androidland.studia.tirt.diabetichelper.ui.android.components.activities.MeasurementActivity;
 import pl.androidland.studia.tirt.diabetichelper.database.models.User;
 import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
 import android.content.Context;
