@@ -81,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
              android:layout_gravity="center_horizontal" android:onClick="addMeasurement"
-            android:textColor="#ffffffff" android:text="Dodaj pomiar" android:id="@+id/"/>
+            android:textColor="#ffffffff" android:text="Dodaj pomiar"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
