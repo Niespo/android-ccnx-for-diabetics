@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import org.apache.commons.lang.StringUtils;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationBus;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationState;
 import pl.androidland.studia.tirt.diabetichelper.R;
@@ -30,6 +31,12 @@ public class MainActivity extends Activity {
             auth = new AuthService(this);
             initComponents();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        etPassword.setText(StringUtils.EMPTY);
     }
 
     private void initComponents() {
