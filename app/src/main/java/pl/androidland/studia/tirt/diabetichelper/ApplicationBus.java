@@ -7,10 +7,11 @@ import pl.androidland.studia.tirt.diabetichelper.database.models.User;
 import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
 import pl.androidland.studia.tirt.diabetichelper.utils.dummydata.DummyDataMocker;
 
+
 public class ApplicationBus extends Application {
 
     private static ApplicationState state;
-    private static Realm realmIo ;
+    private static Realm realmIo;
 
     @Override
     public void onCreate() {
@@ -22,7 +23,7 @@ public class ApplicationBus extends Application {
 
     private void checkDummyDataNeeded() {
         RealmResults<User> users = DatabaseService.getResults();
-        if(users.isEmpty()) {
+        if (users.isEmpty()) {
             DummyDataMocker.fillWithDummyDoctors();
             DummyDataMocker.fillWithDummyPatients();
             DummyDataMocker.fillWithDummyMeasurements();

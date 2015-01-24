@@ -15,13 +15,12 @@ public class DatabaseService {
 
     private static final Realm REALM_IO = ApplicationBus.getRealmInstance();
 
-    public static void addUser(String peselId, String firstname, String surename, Date birthDate, String password, boolean isDoctor) {
+    public static void addUser(String peselId, String firstname, String surename, Date birthDate,
+            String password, boolean isDoctor) {
         REALM_IO.beginTransaction();
-        UserFactory.createUser(peselId, firstname,surename, birthDate, password, isDoctor);
+        UserFactory.createUser(peselId, firstname, surename, birthDate, password, isDoctor);
         REALM_IO.commitTransaction();
     }
-
-
 
     public static void addMeasurement(User user, double measurement) {
         REALM_IO.beginTransaction();
@@ -43,7 +42,7 @@ public class DatabaseService {
     }
 
     public static void unassignPatientToDoctor(User patient, User doctor) {
-        if(!isPatientAssignedToDoctor(patient, doctor))
+        if (!isPatientAssignedToDoctor(patient, doctor))
             return;
         REALM_IO.beginTransaction();
         doctor.getPatients().remove(patient);
@@ -54,7 +53,6 @@ public class DatabaseService {
         return doctor.getPatients().contains(patient);
     }
 
-
     public static User getPatientByPesel(String id) {
         RealmQuery<User> results = REALM_IO.where(User.class);
         return results.equalTo("peselId", id).findFirst();
@@ -64,8 +62,6 @@ public class DatabaseService {
         RealmQuery<User> results = REALM_IO.where(User.class).equalTo("peselId", id);
         return !results.findAll().isEmpty();
     }
-
-
 
     public static RealmResults<User> getResults() {
         return REALM_IO.where(User.class).findAll();

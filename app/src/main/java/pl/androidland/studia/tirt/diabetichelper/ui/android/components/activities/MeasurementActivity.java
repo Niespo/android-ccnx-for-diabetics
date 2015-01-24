@@ -9,6 +9,7 @@ import pl.androidland.studia.tirt.diabetichelper.ui.android.components.adapters.
 import pl.androidland.studia.tirt.diabetichelper.database.models.User;
 import pl.androidland.studia.tirt.diabetichelper.database.services.DatabaseService;
 
+
 public class MeasurementActivity extends UserActivity {
 
     private ListView lvPatientMeasurements;
@@ -38,16 +39,16 @@ public class MeasurementActivity extends UserActivity {
             finishOnLogout();
 
         User user = DatabaseService.getPatientByPesel(peselId);
-        if(!setUser(user))
+        if (!setUser(user))
             return;
 
-        MeasurementsAdapter adapter = new MeasurementsAdapter(this, user.getMeasurements().where().findAll(), true);
+        MeasurementsAdapter adapter = new MeasurementsAdapter(this, user.getMeasurements().where().findAll(),
+                true);
         lvPatientMeasurements.setAdapter(adapter);
     }
 
-    public void closeMeasurements(View view){
+    public void closeMeasurements(View view) {
         finish();
     }
-
 
 }

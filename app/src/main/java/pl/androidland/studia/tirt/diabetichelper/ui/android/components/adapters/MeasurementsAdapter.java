@@ -1,6 +1,5 @@
 package pl.androidland.studia.tirt.diabetichelper.ui.android.components.adapters;
 
-
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +19,8 @@ public class MeasurementsAdapter extends RealmBaseAdapter<GlucoseMeasurement> im
         private TextView date;
     }
 
-    public MeasurementsAdapter(Context context, RealmResults<GlucoseMeasurement> realmResults, boolean automaticUpdate) {
+    public MeasurementsAdapter(Context context, RealmResults<GlucoseMeasurement> realmResults,
+            boolean automaticUpdate) {
         super(context, realmResults, automaticUpdate);
     }
 
@@ -28,7 +28,7 @@ public class MeasurementsAdapter extends RealmBaseAdapter<GlucoseMeasurement> im
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.measurement_item,parent, false);
+            convertView = inflater.inflate(R.layout.measurement_item, parent, false);
             viewHolder = initViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {
@@ -41,8 +41,6 @@ public class MeasurementsAdapter extends RealmBaseAdapter<GlucoseMeasurement> im
         viewHolder.date.setText(DateUtils.toSimpleFormat(measurement.getDate()));
         return convertView;
     }
-
-
 
     private ViewHolder initViewHolder(View convertView) {
         ViewHolder viewHolder;

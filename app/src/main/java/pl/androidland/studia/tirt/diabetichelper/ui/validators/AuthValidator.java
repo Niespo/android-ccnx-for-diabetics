@@ -18,7 +18,8 @@ public class AuthValidator {
 
     public boolean validatePeselId(String peselId) {
         if (!DatabaseService.isPatientRegistered(peselId)) {
-            Toast.makeText(context, context.getString(R.string.TOAST_MESSAGE_PESEL_ALREADY_REGISTERED), Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getString(R.string.TOAST_MESSAGE_PESEL_ALREADY_REGISTERED),
+                    Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
@@ -31,7 +32,8 @@ public class AuthValidator {
         String encryptedPassword = EncryptionUtils.generateMd5Hash(password);
         String storedPassword = user.getPassword();
         if (!storedPassword.equals(encryptedPassword)) {
-            Toast.makeText(context, context.getString(R.string.TOAST_MESSAGE_INCORRECT_PASSWORD), Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getString(R.string.TOAST_MESSAGE_INCORRECT_PASSWORD),
+                    Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;

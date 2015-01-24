@@ -39,7 +39,8 @@ public class DoctorActivity extends UserActivity {
 
     protected void configureComponents() {
         super.configureComponents();
-        PatientListAdapter adapter = new PatientListAdapter(this, getUserRequestedForMeasurment().getPatients().where()
+        PatientListAdapter adapter = new PatientListAdapter(this, getUserRequestedForMeasurment()
+                .getPatients().where()
                 .findAll(), true);
         lvPatientList.setAdapter(adapter);
     }
