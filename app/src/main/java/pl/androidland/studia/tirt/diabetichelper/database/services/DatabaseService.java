@@ -6,7 +6,7 @@ import io.realm.RealmResults;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationBus;
 import pl.androidland.studia.tirt.diabetichelper.database.models.GlucoseMeasurement;
 import pl.androidland.studia.tirt.diabetichelper.database.models.User;
-import pl.androidland.studia.tirt.diabetichelper.database.models.UserFactory;
+import pl.androidland.studia.tirt.diabetichelper.database.UserFactory;
 
 import java.util.Date;
 

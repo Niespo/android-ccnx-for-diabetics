@@ -1,4 +1,4 @@
-package pl.androidland.studia.tirt.diabetichelper.adapters;
+package pl.androidland.studia.tirt.diabetichelper.ui.adapters;
 
 
 import android.content.Context;

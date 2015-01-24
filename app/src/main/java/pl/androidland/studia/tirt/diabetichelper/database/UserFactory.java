@@ -1,7 +1,8 @@
-package pl.androidland.studia.tirt.diabetichelper.database.models;
+package pl.androidland.studia.tirt.diabetichelper.database;
 
 import io.realm.Realm;
 import pl.androidland.studia.tirt.diabetichelper.ApplicationBus;
+import pl.androidland.studia.tirt.diabetichelper.database.models.User;
 
 import java.util.Date;
 

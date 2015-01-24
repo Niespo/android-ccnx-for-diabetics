@@ -28,7 +28,6 @@ public class AuthService {
         return true;
     }
 
-
     private boolean validatePeselId(String peselId) {
         if (!DatabaseService.isPatientRegistered(peselId)) {
             Toast.makeText(context, context.getString(R.string.TOAST_MESSAGE_PESEL_ALREADY_REGISTERED), Toast.LENGTH_SHORT).show();
