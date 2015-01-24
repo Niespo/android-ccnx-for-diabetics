@@ -43,5 +43,8 @@
     <string name="MEASUREMENT_ACTIVITY_CLOSE_TEXT">Zamknij</string>
     <string name="TOAST_MESSAGE_LOGGED_AS_DOCTOR">Zalogowany jako lekarz!</string>
     <string name="TOAST_MESSAGE_LOGGED_AS_PATIENT">Zalogowany jako pacjent!</string>
+    <string name="PATIENT_ACTIVITY_LOGGED_AS">Zalogowany jako:</string>
+    <string name="USER_ACTIVITY_TYPE_GLUCOSE_MEASURMENT_TEXT">Wprowadź kolejny pomiar glukozy we krwi:</string>
+    <string name="PATIENT_ACTIVITY_GLUCOSE_MEASUREMENTS">Pomiary glukozy</string>
 
 </resources>
